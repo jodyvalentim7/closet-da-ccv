@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abrindo Closet Virtual de Camia Valentim...</title>
+
+  <!-- Fonte bonita (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #1e90ff, #4682b4); /* gradiente azul */
+      font-family: 'Poppins', sans-serif;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      color: #000000;
+    }
+
+    .counter {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .spinner {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #cc0000; /* vermelho */
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 25px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      color: #000000;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      font-weight: bold;
+      color: #000000;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <!-- Contador -->
+  <div class="counter" id="contador">4</div>
+
+  <!-- Spinner -->
+  <div class="spinner"></div>
+  
+  <!-- Título -->
+  <div class="title">
+    ✨ ABRINDO O CLOSET VIRTUAL DE CAMIA VALENTIM 🛍️
+  </div>
+  
+  <!-- Subtítulo com emojis -->
+  <div class="subtitle">
+    👉 ENTRE NO GRUPO E FAÇA A SUA ENCOMENDA 📲🛍️
+  </div>
+
+  <script>
+    let segundos = 4;
+    let contador = document.getElementById("contador");
+
+    let intervalo = setInterval(function(){
+      segundos--;
+      contador.textContent = segundos;
+      if(segundos <= 0){
+        clearInterval(intervalo);
+        window.location.href = "https://chat.whatsapp.com/HIPJb0ST74aJSyUtKJ9XhY?mode=ems_copy_t";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
